@@ -45,33 +45,61 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
+
+        color: ['#40c9c6', '#f4516c', '#f9c956', '#ef6567', '#f9c956', '#75bedc'],
+
         tooltip: {
-          trigger: 'item',
-          formatter: '{a} <br/>{b} : {c} ({d}%)'
+
+          trigger: 'item'
+
         },
+
         legend: {
-          left: 'center',
-          bottom: '10',
-          data: ['Industries', 'Technology', 'Forex', 'Gold', 'Forecasts']
+
+          orient: 'vertical',
+
+          left: 'left'
+
         },
+
         series: [
+
           {
-            name: 'WEEKLY WRITE ARTICLES',
+
+            name: 'Process',
+
             type: 'pie',
-            roseType: 'radius',
-            radius: [15, 95],
-            center: ['50%', '38%'],
+
+            radius: '50%',
+
             data: [
-              { value: 320, name: 'Industries' },
-              { value: 240, name: 'Technology' },
-              { value: 149, name: 'Forex' },
-              { value: 100, name: 'Gold' },
-              { value: 59, name: 'Forecasts' }
+
+              { value: 1048, name: 'Succeed' },
+
+              { value: 735, name: 'Failed' },
+
+              { value: 580, name: 'Warning' }
+
             ],
-            animationEasing: 'cubicInOut',
-            animationDuration: 2600
+
+            emphasis: {
+
+              itemStyle: {
+
+                shadowBlur: 10,
+
+                shadowOffsetX: 0,
+
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+
+              }
+
+            }
+
           }
+
         ]
+
       })
     }
   }

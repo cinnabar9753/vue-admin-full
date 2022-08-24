@@ -2,44 +2,44 @@
   <el-row :gutter="40" class="panel-group">
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('newVisitis')">
-        <div class="card-panel-icon-wrapper icon-people">
-          <svg-icon icon-class="peoples" class-name="card-panel-icon" />
+        <div class="card-panel-icon-wrapper icon-succeed">
+          <i class="el-icon-success card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            New Visits
+            Succeed
           </div>
-          <count-to :start-val="0" :end-val="102400" :duration="2600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="1048" :duration="2600" class="card-panel-num" />
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('messages')">
-        <div class="card-panel-icon-wrapper icon-message">
-          <svg-icon icon-class="message" class-name="card-panel-icon" />
+        <div class="card-panel-icon-wrapper icon-failed">
+          <i class="el-icon-error card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            Messages
+            Failed
           </div>
-          <count-to :start-val="0" :end-val="81212" :duration="3000" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="735" :duration="3000" class="card-panel-num" />
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('purchases')">
-        <div class="card-panel-icon-wrapper icon-money">
-          <svg-icon icon-class="money" class-name="card-panel-icon" />
+        <div class="card-panel-icon-wrapper icon-warning">
+          <i class="el-icon-warning card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            Purchases
+            Warning
           </div>
-          <count-to :start-val="0" :end-val="9280" :duration="3200" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="580" :duration="3200" class="card-panel-num" />
         </div>
       </div>
     </el-col>
-    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
+    <!-- <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('shoppings')">
         <div class="card-panel-icon-wrapper icon-shopping">
           <svg-icon icon-class="shopping" class-name="card-panel-icon" />
@@ -51,7 +51,7 @@
           <count-to :start-val="0" :end-val="13600" :duration="3600" class="card-panel-num" />
         </div>
       </div>
-    </el-col>
+    </el-col> -->
   </el-row>
 </template>
 
@@ -94,37 +94,30 @@ export default {
         color: #fff;
       }
 
-      .icon-people {
+      .icon-succeed {
         background: #40c9c6;
       }
 
-      .icon-message {
-        background: #36a3f7;
-      }
-
-      .icon-money {
+      .icon-failed {
         background: #f4516c;
       }
 
-      .icon-shopping {
-        background: #34bfa3
+      .icon-warning {
+        background: #f9c956;
       }
+
     }
 
-    .icon-people {
+    .icon-succeed {
       color: #40c9c6;
     }
 
-    .icon-message {
-      color: #36a3f7;
-    }
-
-    .icon-money {
+    .icon-failed {
       color: #f4516c;
     }
 
-    .icon-shopping {
-      color: #34bfa3
+    .icon-warning {
+      color: #f9c956;
     }
 
     .card-panel-icon-wrapper {
